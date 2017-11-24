@@ -46,14 +46,18 @@ class TopicsController extends Controller
 
 	public function edit(Topic $topic)
 	{
+	    //调用授权策略中的 update 方法，验证用户是否有权限进行修改
         $this->authorize('update', $topic);
+
         $categories = Category::all();
 		return view('topics.create_and_edit', compact('topic','categories'));
 	}
 
 	public function update(TopicRequest $request, Topic $topic)
 	{
+        //调用授权策略中的 update 方法，验证用户是否有权限进行修改
 		$this->authorize('update', $topic);
+
 		$topic->update($request->all());
 
 		return redirect()->route('topics.show', $topic->id)->with('success', 'Updated successfully.');
