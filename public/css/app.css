@@ -8445,7 +8445,12 @@ body {
 }
 
 .users-show-page .list-group .list-group-item .meta {
+  font-size: .9em;
   color: #b3b3b3;
+}
+
+.users-show-page .list-group .list-group-item .reply-content {
+  margin: 6px 0;
 }
 
 .users-show-page .pagination {
@@ -8971,5 +8976,19 @@ body {
 .topic-reply .meta {
   font-size: .9em;
   color: #b3b3b3;
+}
+
+/* Notifications badge */
+
+.notifications-badge {
+  margin-top: -1;
+}
+
+.notifications-badge .badge-fade {
+  background-color: #EBE8E8;
+}
+
+.notifications-badge .badge-hint {
+  background-color: #d15b47 !important;
 }
 
